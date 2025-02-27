@@ -12,7 +12,7 @@ const AboutPage = () => {
     slidesToShow: 1, // Number of slides to show at a time
     slidesToScroll: 1, // Number of slides to scroll at a time
     autoplay: true, // Enables autoplay
-    autoplaySpeed: 2000, // Sets autoplay speed (in milliseconds)
+    // autoplaySpeed: 2000, // Sets autoplay speed (in milliseconds)
     pauseOnHover: true, // Pauses autoplay when hovering over the slide
     responsive: [
       {
