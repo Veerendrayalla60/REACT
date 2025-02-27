@@ -1,0 +1,198 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  /* background-color: #0e0d29; Dark background color */
+  color: white; /* Text color */
+  overflow-x: hidden;
+  background-image: url('https://img.freepik.com/free-vector/cloud-frame-background_91008-390.jpg?ga=GA1.1.639928877.1718960180&semt=ais_hybrid');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Container */
+.about-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* About Us Header */
+.about-header {
+  background: linear-gradient(#F79EA0,#F60A0A);
+  width: 80%;
+  height: 100px;
+  text-align: center;
+  padding: 30px 0;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+/* Header Text */
+.about-header h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+  display: inline-block;
+  padding: 1px 20px;
+  border-radius: 10px;
+}
+
+/* Slide */
+.slide {
+  width: 90%;
+  margin-top: 30px;
+  border: 1px solid red;
+  overflow: hidden;
+  height: 500px;
+  border-radius: 20px;
+}
+.title{
+  margin-bottom: 20px;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  color: white;
+  margin-top: 70px;
+}
+
+.slick-list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-track {
+  display: flex !important; /* Ensure slides are displayed in a row */
+  align-items: center;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slide Content */
+.slide-content {
+  display: flex !important; /* Ensure the content is displayed in a row */
+  justify-content: space-between; /* Space out sides */
+  width: 90% !important; /* Full width */
+}
+
+/* Side 1: Image and Title */
+.side1 {
+  width: 40%; /* Adjust width for side1 to allow space for description */
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Stack title and image vertically */
+  align-items: center; /* Center content */
+  justify-content: center;
+  border-right: 1px solid white; 
+  color: black;/* Center content */
+}
+
+.side1 img {
+  width: 100%; /* Make image take full width of side1 */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 150px; /* Set a maximum width to control size */
+  border-radius: 10px; /* Optional: adds rounded corners */
+  border: 5px dashed red;
+}
+
+/* Side 2: Description */
+.side2 {
+  width: 70%; /* Adjust width for side2 */
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align items to the left */
+  justify-content: flex-start;
+  padding: 10px 10px 10px 20px; /* Add left padding to move elements away from the white border */
+  overflow-y: auto; /* Allow vertical scrolling for longer text */
+  max-height: 300px; /* Set a maximum height for the description */
+  text-align: justify;
+  margin-left: 10px; /* Move side2 content 10px from the white border */
+}
+
+/* Name style with additional spacing */
+.name {
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 10px; /* Space between name and description */
+  border: none; /* Remove border if you don't want it */
+  padding-left: 10px;
+  color: black; /* Adjust position from the white border */
+}
+
+/* Description paragraph style */
+.side2 p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-left: 10px; 
+  color: black;/* Align description with name, 10px from border */
+}
+
+@media (max-width: 1024px) {
+  .side2 {
+    overflow-y: hidden; /* Hide scrollbar in tablet mode */
+  }
+}
+
+@media (max-width: 700px) {
+  .slide{
+    margin-top: 10px;
+    height: 618px;
+  }
+  .slide-content {
+    flex-direction: column;
+  }
+
+  .side1,
+  .side2 {
+    width: 100%; 
+    height: auto; 
+    padding: 10px; 
+  }
+  .side1{
+    border: none;
+  }
+  .side2 h1{
+    position: relative;
+    bottom: 10px;
+    right: 20px;
+  }
+
+  .side2 {
+    margin-left: 30px; /* Reset margin for better alignment on smaller screens */
+  }
+
+  .side2 p {
+    display: none; /* Center text for mobile view */
+  }
+}
+@media (max-width:320px){
+  .slide{
+    margin-bottom: 10px;
+  }
+  .side1 img{
+    border: none;
+  }
+}
